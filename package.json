@@ -1,11 +1,14 @@
 {
-  "name": "insta",
-  "version": "0.1.0",
-  "private": true,
+  "name": "23imgs",
+  "version": "1.0",
+  "private": false,
   "dependencies": {
+    "aws-sdk": "^2.425.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8"
+    "react-images-upload": "^1.2.6",
+    "react-scripts": "2.1.8",
+    "semantic-ui-react": "^0.86.0"
   },
   "scripts": {
     "start": "react-scripts start",
