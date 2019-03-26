@@ -39,6 +39,7 @@ body {
 
 #CardImage {
   height: 614px;
+  width: 614px;
   margin-bottom: 0px;
   box-shadow: 2px 2px 2px #e5d3d3;
 }
