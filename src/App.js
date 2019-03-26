@@ -13,8 +13,7 @@ class App extends Component {
     aboutModalOpen: false,
     uploadVisible: true,
     warningVisible: false,
-    // url: 'https://api-23imgs.7e14.starter-us-west-2.openshiftapps.com'
-    url: 'http://localhost:4000'
+    url: 'https://api-23imgs.7e14.starter-us-west-2.openshiftapps.com'
   };
 
   componentDidMount() {
