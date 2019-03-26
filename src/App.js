@@ -12,7 +12,8 @@ class App extends Component {
     captionModalOpen: false,
     aboutModalOpen: false,
     uploadVisible: true,
-    warningVisible: false
+    warningVisible: false,
+    url = "https://api-23imgs.7e14.starter-us-west-2.openshiftapps.com"
   };
 
   componentDidMount() {
@@ -21,8 +22,7 @@ class App extends Component {
 
   // fetch 23 images in an array from our API/DB server, set them to state
   fetchImages = () => {
-    let url = "	https://api-23imgs.7e14.starter-us-west-2.openshiftapps.com"
-    fetch(url + '/images/')
+    fetch(this.state.url + '/images/')
       .then(res => {
         console.log(res);
         return res.json()
@@ -55,7 +55,7 @@ class App extends Component {
     data.append('file', this.state.upload);
     data.append('caption', caption);
     data.append('number', this.state.count + 1);
-    fetch('http://localhost:4000/upload/', {
+    fetch(url + '/upload/', {
       method: 'POST',
       body: data
     })
