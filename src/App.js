@@ -21,8 +21,12 @@ class App extends Component {
 
   // fetch 23 images in an array from our API/DB server, set them to state
   fetchImages = () => {
-    fetch('http://localhost:4000/images/')
-      .then(res => res.json())
+    let url = "	https://api-23imgs.7e14.starter-us-west-2.openshiftapps.com"
+    fetch(url + '/images/')
+      .then(res => {
+        console.log(res);
+        return res.json()
+      })
       .then(json => {
         let images = json.images;
         let count = images[images.length - 1].number;
