@@ -13,7 +13,8 @@ class App extends Component {
     aboutModalOpen: false,
     uploadVisible: true,
     warningVisible: false,
-    url: 'https://api-23imgs.7e14.starter-us-west-2.openshiftapps.com'
+    // url: 'https://api-23imgs.7e14.starter-us-west-2.openshiftapps.com'
+    url: 'http://localhost:4000'
   };
 
   componentDidMount() {
@@ -26,10 +27,13 @@ class App extends Component {
       .then(res => {
         return res.json();
       })
-      .then(json => {
-        let images = json.images;
+      .then(images => {
         let count = images[images.length - 1].number;
-        this.setState({ images, count });
+        let uploadVisible = true;
+        if (this.state.upload) {
+          uploadVisible = false;
+        }
+        this.setState({ images: images.reverse(), count, uploadVisible });
       })
       .catch(err => console.log(err));
   };
@@ -59,25 +63,7 @@ class App extends Component {
       body: data
     })
       .then(res => {
-        res.text().then(url => {
-          let images = this.state.images;
-          let newImage = {
-            url,
-            number: this.state.count + 1,
-            caption
-          };
-          images.push(newImage);
-          this.setState(
-            {
-              images,
-              count: this.state.count + 1,
-              uploadVisible: false
-            },
-            () => {
-              this.fetchImages();
-            }
-          );
-        });
+        this.fetchImages();
       })
       .catch(err => console.log(err));
   };
@@ -87,7 +73,7 @@ class App extends Component {
   // opens the caption modal and saves the image to state
   onDrop = upload => {
     upload = upload[upload.length - 1];
-    if(!upload) {
+    if (!upload) {
       return;
     }
     if (upload.size > 25000) {
@@ -109,7 +95,6 @@ class App extends Component {
         />
       );
     });
-    images = images.reverse();
 
     return (
       <div className="App">
