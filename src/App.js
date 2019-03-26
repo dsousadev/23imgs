@@ -13,7 +13,7 @@ class App extends Component {
     aboutModalOpen: false,
     uploadVisible: true,
     warningVisible: false,
-    url = "https://api-23imgs.7e14.starter-us-west-2.openshiftapps.com"
+    url: 'https://api-23imgs.7e14.starter-us-west-2.openshiftapps.com'
   };
 
   componentDidMount() {
@@ -24,8 +24,7 @@ class App extends Component {
   fetchImages = () => {
     fetch(this.state.url + '/images/')
       .then(res => {
-        console.log(res);
-        return res.json()
+        return res.json();
       })
       .then(json => {
         let images = json.images;
@@ -55,7 +54,7 @@ class App extends Component {
     data.append('file', this.state.upload);
     data.append('caption', caption);
     data.append('number', this.state.count + 1);
-    fetch(url + '/upload/', {
+    fetch(this.state.url + '/upload/', {
       method: 'POST',
       body: data
     })
@@ -87,7 +86,7 @@ class App extends Component {
   // checks if the image size is large enough
   // opens the caption modal and saves the image to state
   onDrop = upload => {
-    upload = upload[upload.length - 1]
+    upload = upload[upload.length - 1];
     if (upload.size > 25000) {
       this.setState({ upload }, () => {
         this.toggleModal('captionModalOpen');

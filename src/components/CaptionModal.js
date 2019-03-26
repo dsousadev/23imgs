@@ -2,7 +2,6 @@ import React from 'react';
 import { Modal, Input, Header } from 'semantic-ui-react';
 
 class CaptionModal extends React.Component {
-
   state = {
     caption: '',
     charsRemaining: 60
@@ -17,10 +16,11 @@ class CaptionModal extends React.Component {
   };
 
   keyPress = e => {
-    if(!e.keyCode) {
-      e.keyCode = 13;
+    let event = e;
+    if (!event) {
+      event = { keyCode: 13 };
     }
-    if (e.keyCode === 13 && this.state.charsRemaining >= 0) {
+    if (event.keyCode === 13 && this.state.charsRemaining >= 0) {
       this.props.toggleModal('captionModalOpen', this.state.caption);
     }
   };
@@ -41,9 +41,9 @@ class CaptionModal extends React.Component {
               color: 'teal',
               content: 'Submit',
               onClick: () => {
-                  this.keyPress();
-                }
-              }}
+                this.keyPress();
+              }
+            }}
           />
         </Modal.Description>
       </Modal.Content>
