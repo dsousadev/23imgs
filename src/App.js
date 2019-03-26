@@ -87,6 +87,9 @@ class App extends Component {
   // opens the caption modal and saves the image to state
   onDrop = upload => {
     upload = upload[upload.length - 1];
+    if(!upload) {
+      return;
+    }
     if (upload.size > 25000) {
       this.setState({ upload }, () => {
         this.toggleModal('captionModalOpen');
