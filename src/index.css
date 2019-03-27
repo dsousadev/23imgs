@@ -75,15 +75,10 @@ input {
   .ImageCard {
     width: 314px;
   }
-
   #CardImage {
     height: 314px;
     width: 314px;
   }
-  /* #AboutModal {
-    display: grid;
-    justify-items: center;
-  } */
   ul {
     font-size: 1.2rem;
     padding: 0 15px;
