@@ -1,5 +1,5 @@
 {
-  "main.css": "/23imgs/static/css/main.69e9e407.chunk.css",
+  "main.css": "/23imgs/static/css/main.965475e0.chunk.css",
   "main.js": "/23imgs/static/js/main.d6504b9e.chunk.js",
   "main.js.map": "/23imgs/static/js/main.d6504b9e.chunk.js.map",
   "runtime~main.js": "/23imgs/static/js/runtime~main.0096b50e.js",
@@ -8,9 +8,9 @@
   "static/js/2.f4a371d1.chunk.js": "/23imgs/static/js/2.f4a371d1.chunk.js",
   "static/js/2.f4a371d1.chunk.js.map": "/23imgs/static/js/2.f4a371d1.chunk.js.map",
   "index.html": "/23imgs/index.html",
-  "precache-manifest.64c1b869d197e599383cd5e9e3aa85fe.js": "/23imgs/precache-manifest.64c1b869d197e599383cd5e9e3aa85fe.js",
+  "precache-manifest.f12540b4bc6be9eb357dd686113e9460.js": "/23imgs/precache-manifest.f12540b4bc6be9eb357dd686113e9460.js",
   "service-worker.js": "/23imgs/service-worker.js",
   "static/css/2.295d9f09.chunk.css.map": "/23imgs/static/css/2.295d9f09.chunk.css.map",
-  "static/css/main.69e9e407.chunk.css.map": "/23imgs/static/css/main.69e9e407.chunk.css.map",
+  "static/css/main.965475e0.chunk.css.map": "/23imgs/static/css/main.965475e0.chunk.css.map",
   "static/media/UploadIcon.svg": "/23imgs/static/media/UploadIcon.1cedb6e9.svg"
 }
