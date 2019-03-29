@@ -7,7 +7,7 @@ const Header = props => {
     <div className="Header">
       <div className="title">
         23imgs
-        <Button
+        <Button  
           className="About"
           size="mini"
           circular

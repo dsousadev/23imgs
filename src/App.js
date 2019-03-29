@@ -96,7 +96,7 @@ class App extends Component {
     });
 
     return (
-      <div className="App">
+      <div className="App"> 
         <Header
           onDrop={this.onDrop}
           toggleModal={this.toggleModal}
