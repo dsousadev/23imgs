@@ -19,15 +19,14 @@ const Header = props => {
       </div>
       {props.uploadVisible && (
         <ImageUploader
-          id="ImageUploader"
           className="ImageUploader"
           withIcon={true}
           onChange={props.onDrop}
           buttonText="Upload Image"
           singleImage={true}
           imgExtension={['.jpg', '.png', '.gif', '.jpeg']}
-          label="Max File Size: 500kb | Format: jpg / png / gif"
-          maxFileSize={500000}
+          label="Max File Size: 1mb | Format: jpg / png / gif"
+          maxFileSize={1500000}
         />
       )}
     </div>

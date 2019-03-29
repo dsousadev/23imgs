@@ -1,22 +1,9 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
-  font-weight: 500;
-  color: #444444;
-}
-
 .About {
   float: right;
   margin-left: 10px !important;
 }
 
 .ImageUploader {
-  display: grid;
-  justify-items: center;
   padding-top: 10px;
 }
 
@@ -28,7 +15,6 @@ body {
 .ImageCard {
   padding-top: 10px;
   padding-bottom: 30px;
-  width: 614px;
 }
 
 .CaptionArea {
@@ -40,7 +26,6 @@ body {
 #CardImage {
   height: 614px;
   width: 614px;
-  margin-bottom: 0px;
   box-shadow: 2px 2px 2px #e5d3d3;
 }
 
@@ -67,23 +52,19 @@ h2 {
   padding-bottom: 10px;
 }
 
-input {
-  width: 0px;
-}
-
-@media all and (max-width:414px) {
-  .ImageCard {
+@media all and (max-width: 414px) {
+  .ImageCard,
+  #CardImage {
     width: 314px;
   }
   #CardImage {
     height: 314px;
-    width: 314px;
   }
   ul {
     font-size: 1.2rem;
     padding: 0 15px;
   }
-  .App, #root, html, body {
-    width: 100%;
+  .fileContainer input {
+    display: none;
   }
 }
