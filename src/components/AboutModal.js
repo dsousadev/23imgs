@@ -12,8 +12,8 @@ const AboutModal = props => (
           </li>
           <li>Anyone can post an image, only the 23 most recent are posted.</li>
           <li>
-            You cannot delete an image once you post it, it will be removed when
-            it is the "24th" image.
+            You cannot delete an image once you post it, it will be removed when it is the "24th"
+            image.
           </li>
           <li>
             Code for both the React front-end and Node back-end can be found on:{' '}

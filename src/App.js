@@ -13,6 +13,7 @@ class App extends Component {
     aboutModalOpen: false,
     uploadVisible: true,
     warningVisible: false,
+    // url: 'http://localhost:8080'
     url: 'https://api-23imgs.7e14.starter-us-west-2.openshiftapps.com'
   };
 
@@ -32,7 +33,7 @@ class App extends Component {
         if (this.state.upload) {
           uploadVisible = false;
         }
-        this.setState({ images: images.reverse(), count, uploadVisible });
+        this.setState({ images, count, uploadVisible });
       })
       .catch(err => console.log(err));
   };
@@ -86,34 +87,19 @@ class App extends Component {
 
   render() {
     let images = this.state.images.map(imageObj => {
-      return (
-        <ImageCard
-          url={imageObj.url}
-          caption={imageObj.caption}
-          key={imageObj.number}
-        />
-      );
+      return <ImageCard url={imageObj.url} caption={imageObj.caption} key={imageObj.number} />;
     });
 
     return (
-      <div className="App"> 
+      <div className="App">
         <Header
           onDrop={this.onDrop}
           toggleModal={this.toggleModal}
           uploadVisible={this.state.uploadVisible}
         />
-        <CaptionModal
-          open={this.state.captionModalOpen}
-          toggleModal={this.toggleModal}
-        />
-        <AboutModal
-          open={this.state.aboutModalOpen}
-          toggleModal={this.toggleModal}
-        />
-        <WarningModal
-          open={this.state.warningVisible}
-          toggleModal={this.toggleModal}
-        />
+        <CaptionModal open={this.state.captionModalOpen} toggleModal={this.toggleModal} />
+        <AboutModal open={this.state.aboutModalOpen} toggleModal={this.toggleModal} />
+        <WarningModal open={this.state.warningVisible} toggleModal={this.toggleModal} />
         {images}
       </div>
     );
