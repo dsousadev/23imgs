@@ -28,7 +28,7 @@ class App extends Component {
         return res.json();
       })
       .then(images => {
-        let count = images[images.length - 1].number;
+        let count = images[0].number;
         let uploadVisible = true;
         if (this.state.upload) {
           uploadVisible = false;
