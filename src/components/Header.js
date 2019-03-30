@@ -25,8 +25,8 @@ const Header = props => {
           buttonText="Upload Image"
           singleImage={true}
           imgExtension={['.jpg', '.png', '.gif', '.jpeg']}
-          label="Max File Size: 1mb | Format: jpg / png / gif"
-          maxFileSize={1500000}
+          label="Max File Size: 3mb | Format: jpg / png / gif"
+          maxFileSize={3000000}
         />
       )}
     </div>
