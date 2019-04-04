@@ -24,7 +24,6 @@
 }
 
 #CardImage {
-  height: 614px;
   width: 614px;
   box-shadow: 2px 2px 2px #e5d3d3;
 }
@@ -56,9 +55,6 @@ h2 {
   .ImageCard,
   #CardImage {
     width: 314px;
-  }
-  #CardImage {
-    height: 314px;
   }
   ul {
     font-size: 1.2rem;

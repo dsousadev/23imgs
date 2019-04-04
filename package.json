@@ -1,7 +1,7 @@
 {
   "name": "23imgs",
   "private": false,
-  "homepage": "http://dsousadev.github.io/23imgs",
+  "homepage": "https://dsousadev.github.io/23imgs",
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
