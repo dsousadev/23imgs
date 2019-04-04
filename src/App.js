@@ -87,7 +87,7 @@ class App extends Component {
 
   render() {
     let images = this.state.images.map(imageObj => {
-      return <ImageCard url={imageObj.url} caption={imageObj.caption} key={imageObj.number} />;
+      return <ImageCard base64={imageObj.base64} caption={imageObj.caption} key={imageObj.number} />;
     });
 
     return (
