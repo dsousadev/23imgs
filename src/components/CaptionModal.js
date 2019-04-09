@@ -1,5 +1,6 @@
 import React from 'react';
 import { Modal, Input, Header } from 'semantic-ui-react';
+import './Modal.css';
 
 class CaptionModal extends React.Component {
   state = {

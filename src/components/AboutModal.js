@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Modal } from 'semantic-ui-react';
+import './Modal.css';
 
 const AboutModal = props => (
   <Modal dimmer="blurring" open={props.open}>
