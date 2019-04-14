@@ -28,8 +28,16 @@
   box-shadow: 2px 2px 2px #e5d3d3;
 }
 
-ul {
+#Heading {
   list-style-type: none;
+  margin-left: -20px;
+}
+
+#CodeButton {
+  margin: -10px 0 10px 0;
+}
+
+ul {
   font-size: 1.3rem;
 }
 

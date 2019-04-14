@@ -4,6 +4,7 @@ import ImageCard from './components/ImageCard';
 import AboutModal from './components/AboutModal';
 import CaptionModal from './components/CaptionModal';
 import WarningModal from './components/WarningModal';
+import {Button, Icon} from 'semantic-ui-react';
 
 class App extends Component {
   state = {
@@ -101,6 +102,7 @@ class App extends Component {
         <AboutModal open={this.state.aboutModalOpen} toggleModal={this.toggleModal} />
         <WarningModal open={this.state.warningVisible} toggleModal={this.toggleModal} />
         {images}
+        <a href='https://github.com/dsousadev'><Button icon size="medium" id='CodeButton'>Github <Icon name='github alternate' /> </Button></a>
       </div>
     );
   }

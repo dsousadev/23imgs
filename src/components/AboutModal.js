@@ -8,17 +8,15 @@ const AboutModal = props => (
     <Modal.Content>
       <Modal.Description>
         <ul>
-          <li>
+          <li id="Heading">
             <h2>23imgs is a simple web application built with React.</h2>
           </li>
-          <li>Anyone can post an image, only the 23 most recent are posted.</li>
+          <li>Anyone can post an image, the 23 most recent are visible.</li>
           <li>
-            You cannot delete an image once you post it, it will be removed when it is the "24th"
-            image.
+            An image is deleted once it becomes the "24th" in the feed.
           </li>
           <li>
-            Code for both the React front-end and Node back-end can be found on:{' '}
-            <a href="http://www.github.com/dsousadev">Github</a>
+          <a href="http://www.github.com/dsousadev">Code for this web app and the Node.js API</a>
           </li>
         </ul>
       </Modal.Description>
